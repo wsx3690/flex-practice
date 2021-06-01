@@ -1,0 +1,296 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+.wrap{
+    width: 940px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.header .logo{
+    height: 40px;    
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 80px;
+    width: 215px;
+
+}
+
+.menu ul li a{
+    text-decoration: none;
+    width: 32px;
+    /* height: 22px; */
+    text-align: left;
+    font: normal normal 600 16px/73px PingFang TC;
+    letter-spacing: 0px;
+    color: #3F5D45;
+    opacity: 1;
+    display: block;
+    padding: 8px 10px 10px;
+}
+
+.menu ul li a:hover{
+    color: white;
+    background-color:  #3F5D45;
+}
+
+.body{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    font: normal normal 600 24px/40px PingFang TC;
+
+}
+
+.category h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    background: #3F5D45 0% 0% no-repeat padding-box;
+    opacity: 1;
+    
+    letter-spacing: 0px;
+    color: #EAF0ED;
+}
+
+.category li{
+    display: flex;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #EAF0ED;
+}
+
+.all-dessert{
+    background: #EAF0ED 0% 0% no-repeat padding-box;
+}
+
+.category li+li{
+    border-top: 0px;
+}
+
+.category li a{
+    display: flex;
+    text-decoration: none;
+    letter-spacing: 0px;
+    color: #3F5D45;
+    opacity: 1;
+    display: block;
+    width: 300px;
+    height: 65px;
+    line-height: 65px;
+}
+
+.category li a:hover{
+    color: white;
+    background-color:  #3F5D45;
+    
+}
+.product-list
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 620px;
+    margin-left: 20px;
+}
+
+.products{
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.product-photo{
+    position: relative;
+}
+
+.favorite{
+    position: absolute;
+    top: 19px;
+    left: 258px;
+}
+
+.focus{
+    position: absolute;
+    left: 20px;
+    width: 36px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 107px;
+    background: #3F5D45 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: center;
+    font: normal normal 600 16px/20px PingFang TC;
+    letter-spacing: 0px;
+    color: #EAF0ED;
+}
+
+.price{
+    display: flex;
+    text-align: center;
+    height: 56px;
+    align-items: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EAF0ED;
+    opacity: 1;
+    letter-spacing: 0px;
+    color: #3F5D45;
+}
+
+.price h2{
+    width: 171px; 
+    font: normal normal 300 20px/20px PingFang TC;   
+}
+
+.price p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 126px;
+    height: 56px;
+    line-height: 56px;
+    border-left: 1px solid #EAF0ED;
+    font: normal normal 600 20px/24px PingFang TC;
+}
+
+.cart{
+    background: #EAF0ED 0% 0% no-repeat padding-box;
+    border: 1px solid #EAF0ED;
+    width: 298px;
+    height: 63px;
+    text-align: center;
+    font: normal normal 600 24px/20px PingFang TC;
+    letter-spacing: 0px;
+    color: #3F5D45;
+    opacity: 1;
+    text-decoration: none;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart:hover{
+    color: white;
+    background-color:  #3F5D45;
+}
+
+.pagination{
+    width: 300px;
+    margin-left: 640px;
+}
+
+.pagination ul{
+    display: flex;
+    justify-content: space-evenly:
+}
+
+.pagination li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #EAF0ED;
+    opacity: 1;
+    
+}
+
+.pagination li+li{
+    border-left: 0px;
+}
+
+.pagination li a{
+    text-decoration: none;
+    font: normal normal 300 20px/20px PingFang TC;
+    letter-spacing: 0px;
+    color: #3F5D45;
+    opacity: 1;
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+
+}
+
+.pagination .page1{
+    color: #EAF0ED;
+    background: #3F5D45 0% 0% no-repeat padding-box; 
+}
