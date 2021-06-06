@@ -47,25 +47,25 @@ table {
 	border-spacing: 0;
 }
 
-
+img{
+    max-width: 100%;
+    height: auto;
+}
 
 
 .wrap{
-    width: 940px;
+    max-width: 940px;
     margin: 30px auto;
-    display: flex;
-    flex-direction: column;
-    
 }
 
 .header{
-    height: 40px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
 .header .logo{
+    display: block;
     height: 40px;    
 }
 
@@ -79,21 +79,19 @@ table {
     display: flex;
     justify-content: space-between;
     margin-right: 80px;
-    width: 215px;
-
 }
 
+.menu ul li{
+    margin-right: 19.6px;
+}
 .menu ul li a{
     text-decoration: none;
-    width: 32px;
-    /* height: 22px; */
-    text-align: left;
-    font: normal normal 600 16px/73px PingFang TC;
-    letter-spacing: 0px;
+    font: normal normal 600 16px/40px PingFang TC;
     color: #3F5D45;
-    opacity: 1;
     display: block;
-    padding: 8px 10px 10px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    
 }
 
 .menu ul li a:hover{
@@ -109,8 +107,6 @@ table {
 }
 
 .category{
-    display: flex;
-    flex-direction: column;
     width: 300px;
     text-align: center;
     font: normal normal 600 24px/40px PingFang TC;
@@ -118,22 +114,12 @@ table {
 }
 
 .category h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 65px;
+    padding: 12.5px 0;   
     background: #3F5D45 0% 0% no-repeat padding-box;
-    opacity: 1;
-    
-    letter-spacing: 0px;
     color: #EAF0ED;
 }
 
 .category li{
-    display: flex;
-    height: 65px;
-    justify-content: center;
-    align-items: center;
     border: 1px solid #EAF0ED;
 }
 
@@ -146,15 +132,10 @@ table {
 }
 
 .category li a{
-    display: flex;
+    padding: 12.5px 0;
     text-decoration: none;
-    letter-spacing: 0px;
     color: #3F5D45;
-    opacity: 1;
     display: block;
-    width: 300px;
-    height: 65px;
-    line-height: 65px;
 }
 
 .category li a:hover{
@@ -180,6 +161,10 @@ table {
     position: relative;
 }
 
+.product-photo img{
+    display: block;
+}
+
 .favorite{
     position: absolute;
     top: 19px;
@@ -188,17 +173,15 @@ table {
 
 .focus{
     position: absolute;
+    top: 0px;
     left: 20px;
-    width: 36px;
-    padding: 10px;
-    box-sizing: border-box;
-    height: 107px;
+    padding: 8px;
+    box-sizing: border-box;  /*寬度包含padding*/
     background: #3F5D45 0% 0% no-repeat padding-box;
-    opacity: 1;
-    text-align: center;
     font: normal normal 600 16px/20px PingFang TC;
-    letter-spacing: 0px;
     color: #EAF0ED;
+    writing-mode: vertical-lr;
+    letter-spacing: 6.5px;
 }
 
 .price{
@@ -208,12 +191,10 @@ table {
     align-items: center;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #EAF0ED;
-    opacity: 1;
-    letter-spacing: 0px;
     color: #3F5D45;
 }
 
-.price h2{
+.price h3{
     width: 171px; 
     font: normal normal 300 20px/20px PingFang TC;   
 }
@@ -224,7 +205,6 @@ table {
     justify-content: center;
     width: 126px;
     height: 56px;
-    line-height: 56px;
     border-left: 1px solid #EAF0ED;
     font: normal normal 600 20px/24px PingFang TC;
 }
@@ -232,15 +212,11 @@ table {
 .cart{
     background: #EAF0ED 0% 0% no-repeat padding-box;
     border: 1px solid #EAF0ED;
-    width: 298px;
-    height: 63px;
+    padding: 20.5px 0;
     text-align: center;
     font: normal normal 600 24px/20px PingFang TC;
-    letter-spacing: 0px;
     color: #3F5D45;
-    opacity: 1;
     text-decoration: none;
-    display: block;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,8 +228,8 @@ table {
 }
 
 .pagination{
-    width: 300px;
-    margin-left: 640px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .pagination ul{
@@ -264,11 +240,7 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
-    border: 1px solid #EAF0ED;
-    opacity: 1;
-    
+    border: 1px solid #EAF0ED; 
 }
 
 .pagination li+li{
@@ -278,15 +250,23 @@ table {
 .pagination li a{
     text-decoration: none;
     font: normal normal 300 20px/20px PingFang TC;
-    letter-spacing: 0px;
     color: #3F5D45;
-    opacity: 1;
-    display: block;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: center;
+}
 
+.pagination .arrow{
+    padding: 18px 18px;
+}
+
+.pagination .arrow:hover{
+    background-color:  #92cf9e;
+}
+
+.pagination li a:hover{
+    color: white;
+    background-color:  #3F5D45;
 }
 
 .pagination .page1{
