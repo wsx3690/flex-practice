@@ -20,7 +20,7 @@
             <!-- 右上選單 -->
             <div class="menu">
                 <ul>
-                    <li><a href="#">首頁</a></li>
+                    <li><a href="index.html">首頁</a></li>
                     <li><a href="#">甜點</a></li>
                     <li><a href="#">登入</a></li>    
                 </ul>
@@ -66,7 +66,7 @@
                 <label>身分選擇</label>
                 <label><input type="radio" name="identity" value="Taiwanese" checked required>本國籍Taiwanese</label>
                 <label><input type="radio" name="identity" value="Foreigner" >外國籍Foreigner</label>
-                <input type="text" pattern="^[A-Za-z]{1}\\d{9}$" class="form-control" id="identity" placeholder="請輸入身分證字號或居留證/護照號碼" required />
+                <input type="text" pattern="^[A-Za-z][12]\d{8}$" class="form-control" id="identity" placeholder="請輸入身分證字號或居留證/護照號碼" required />
                 <div class="invalid-feedback">請輸入正確身分證字號或居留證/護照號碼</div>
                 </div>
                 <div class="fillIn">

@@ -54,7 +54,7 @@
 
 
 
-//符合正規表示就打勾，不符合驚嘆號
+//表格內容符合正規表示就打勾，不符合驚嘆號
 let formControls = document.querySelectorAll(".form-control");
 formControls.forEach(function (item) {
   item.addEventListener("input", function () {
@@ -75,7 +75,7 @@ input.forEach(function (item) {
     if (item.value == "Taiwanese") {
       document
         .getElementById("identity")
-        .setAttribute("pattern", "^[A-Za-z]{1}\\d{9}$");
+        .setAttribute("pattern", "^[A-Za-z][12]\d{8}$");
     } else {
       document
         .getElementById("identity")
@@ -91,15 +91,15 @@ let productItems = [
   {
     name: "(新品)焦糖馬卡龍1",
     price: 450,
-    promote: true,
-    new: true,
+    promote: true,  //本日精選
+    new: true,  //新品上市
     pic: "https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-1.png",
   },
   {
     name: "(人氣王)焦糖馬卡龍2",
     price: 450,
     promote: true,
-    famous: true,
+    famous: true,  //人氣推薦
     pic: "https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-2.png",
   },
   {
@@ -132,6 +132,7 @@ const productList = document.querySelector(".product-list");
 const modal_body = document.querySelector(".modal-body");
 const cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
 
+//於productItems給予id屬性
 productItems.forEach(function (item,index){
   item.id = index+1;
 })
@@ -143,7 +144,7 @@ categoryBtns.forEach(function (element) {
   element.addEventListener("click", function (e) {
     document.querySelector(".category li a.active").classList.remove("active");
     e.target.classList.add("active");
-    //篩選選單
+    //從篩選選單取值
     filter = e.target.getAttribute("data-filter");
     init();
   });
@@ -154,8 +155,7 @@ function init() {
   let allCount = productItems.length;
   let promoteCount = (famousCount = newCount = 0);
   productList.innerHTML = "";
-  productItems
-    .filter(function (item) {
+  productItems.filter(function (item) {
       if (item.promote == true) {
         promoteCount++;
       }
@@ -165,7 +165,7 @@ function init() {
       if (item.new == true) {
         newCount++;
       }
-      //篩選做相對應切換
+      //取到filter的值篩選做相對應切換
       return item[filter] || filter == "all"; //filter: 'new', item[filter] == item.new
     })
     .forEach(function (item, index) {
