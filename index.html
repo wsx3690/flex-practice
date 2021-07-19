@@ -4,125 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
-    <title>Product List</title>
+    <title>甜點電商</title>
 </head>
 <body>
     <div class="wrap">
+        <!-- 表頭 -->
         <div class="header">
             <div>
-                <h1><a href="#"><img class="logo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg" alt="logo"></a></h1>               
+                <h1><a href="#" id="ccount"><img class="logo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg" alt="logo"></a></h1>               
             </div>
+            <!-- 右上選單 -->
             <div class="menu">
                 <ul>
                     <li><a href="#">首頁</a></li>
                     <li><a href="#">甜點</a></li>
                     <li><a href="#">登入</a></li>    
                 </ul>
-                <a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/shopping_cart.png" alt="購物車"></a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/shopping_cart.png" alt="購物車"></a>
                 
             </div>
         </div>
+        <!-- 中間大圖 -->
         <div>
             <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/banner.png" alt="">
         </div>
+        <!-- 選單及產品列表 -->
         <div class="body">
+            <!-- 選單 -->
             <div class="category">
                 <h2>甜點類別</h2>
                 <ul>
-                    <li class="all-dessert"><a href="#">所有甜點(48)</a></li>
-                    <li><a href="#">本日精選(10)</a></li>
-                    <li><a href="#">人氣推薦(26)</a></li>
-                    <li><a href="#">新品上市(12)</a></li>
+                    <li class="all-dessert"><a data-filter="all" href="#" class="allNum active">所有甜點(0)</a></li>
+                    <li><a data-filter="promote" href="#" class="promoteNum">本日精選(0)</a></li>
+                    <li><a data-filter="famous" href="#" class="famousNum">人氣推薦(0)</a></li>
+                    <li><a data-filter="new" href="#" class="newNum">新品上市(0)</a></li>
                 </ul>
             </div>
+            <!-- 產品區 -->
             <div class="product-list">
-                <div class="products">
-                    <div class="product-photo" >
-                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-1.png" alt="甜點照">
-                        <a href="#"><img class="favorite" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/favorite_border.png" alt="加入我的最愛"></a>
-                        <span class="focus">本日精選</span>
-                    </div>
-                    <div class="price">
-                        <h3>焦糖馬卡龍</h3>
-                        <p>NT$ 450</p>
-                    </div>
-                    <div>
-                        <a class="cart" href="#">加入購物車</a>
-                    </div>                    
-                </div>
-                <div class="products">
-                    <div class="product-photo" >
-                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-2.png" alt="甜點照">
-                        <a href="#"><img class="favorite" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/favorite_border.png" alt="加入我的最愛"></a>
-                        <span class="focus">本日精選</span>
-                    </div>
-                    <div class="price">
-                        <h3>焦糖馬卡龍</h3>
-                        <p>NT$ 450</p>
-                    </div>
-                    <div>
-                        <a class="cart" href="#">加入購物車</a>
-                    </div>                    
-                </div>
-                <div class="products">
-                    <div class="product-photo" >
-                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-3.png" alt="甜點照">
-                        <a href="#"><img class="favorite" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/favorite_border.png" alt="加入我的最愛"></a>
-                        <span class="focus">本日精選</span>
-                    </div>
-                    <div class="price">
-                        <h3>焦糖馬卡龍</h3>
-                        <p>NT$ 450</p>
-                    </div>
-                    <div>
-                        <a class="cart" href="#">加入購物車</a>
-                    </div>                    
-                </div>
-                <div class="products">
-                    <div class="product-photo" >
-                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-4.png" alt="甜點照">
-                        <a href="#"><img class="favorite" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/favorite_border.png" alt="加入我的最愛"></a>
-                        <span class="focus">本日精選</span>
-                    </div>
-                    <div class="price">
-                        <h3>焦糖馬卡龍</h3>
-                        <p>NT$ 450</p>
-                    </div>
-                    <div>
-                        <a class="cart" href="#">加入購物車</a>
-                    </div>                    
-                </div>
-                <div class="products">
-                    <div class="product-photo" >
-                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-5.png" alt="甜點照">
-                        <a href="#"><img class="favorite" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/favorite_border.png" alt="加入我的最愛"></a>
-                        <span class="focus">本日精選</span>
-                    </div>
-                    <div class="price">
-                        <h3>焦糖馬卡龍</h3>
-                        <p>NT$ 450</p>
-                    </div>
-                    <div>
-                        <a class="cart" href="#">加入購物車</a>
-                    </div>                    
-                </div>
-                <div class="products">
-                    <div class="product-photo" >
-                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-6.png" alt="甜點照">
-                        <a href="#"><img class="favorite" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/favorite_border.png" alt="加入我的最愛"></a>
-                        <span class="focus">本日精選</span>
-                    </div>
-                    <div class="price">
-                        <h3>焦糖馬卡龍</h3>
-                        <p>NT$ 450</p>
-                    </div>
-                    <div>
-                        <a class="cart" href="#">加入購物車</a>
-                    </div>                    
-                </div>
             </div>
         </div>
+        <!-- 頁碼 -->
         <div class="pagination">
             <ul>
                 <li><a class="arrow" href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_left.png" alt="上一頁"></a></li>
@@ -132,6 +58,70 @@
                 <li><a class="arrow" href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_right.png" alt="下一頁"></a></li>
             </ul>
         </div>
+        <!-- 表單 -->
+        <div class="contactUs">
+            <h2 class="">聯繫我們</h2>
+            <form id="form" class="needs-validation" action="" novalidate>
+                <div class="fillIn">
+                <label>身分選擇</label>
+                <label><input type="radio" name="identity" value="Taiwanese" checked required>本國籍Taiwanese</label>
+                <label><input type="radio" name="identity" value="Foreigner" >外國籍Foreigner</label>
+                <input type="text" pattern="^[A-Za-z]{1}\\d{9}$" class="form-control" id="identity" placeholder="請輸入身分證字號或居留證/護照號碼" required />
+                <div class="invalid-feedback">請輸入正確身分證字號或居留證/護照號碼</div>
+                </div>
+                <div class="fillIn">
+                    <label for="name" class="form-label">姓名</label>
+                    <input type="text" class="form-control" id="name" placeholder="請輸入姓名" required />
+                    <div class="invalid-feedback">請輸入正確的姓名</div>
+                </div>
+
+                <div class="fillIn">
+                    <label for="address" class="form-label">聯絡地址</label>
+                    <select class="form-control" id="縣市1" required></select>
+                    <select class="form-control" id="鄉鎮市區1" required></select>
+                    <input type="text" class="form-control" id="address" placeholder="請輸入地址" required />
+                    <div class="invalid-feedback">請輸入正確的聯絡地址</div>
+                </div>
+
+                <div class="fillIn">
+                    <label for="phone" class="form-label">聯絡電話</label>
+                    <input type="text" pattern="^09[0-9]{8}$" class="form-control" id="phone" placeholder="請輸入電話號碼" required />
+                    <div class="invalid-feedback">請輸入正確的電話號碼</div>
+                </div>
+
+                <div class="fillIn">
+                    <label for="email" class="form-label">聯絡信箱</label>
+                    <input type="email" pattern="^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$" class="form-control" id="email" placeholder="請輸入電子信箱" required />
+                    <div class="invalid-feedback">請輸入正確的郵件格式</div>
+                </div>
+                <div class="fillIn text-center">
+                    <button type="submit" class="btn">提交</button>
+                </div>  
+            </form>
+        </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">購物清單</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            您還未加入任何商品
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">繼續購物</button>
+            <button type="button" class="btn btn-success">結帳</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="js/address.js"></script>
+    <script src="js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
 </body>
 </html>
